@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RBP</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div class="nav-logo">
+        <%= link_to 'RBP', root_path %>
+      </div>
+
+      <div class="nav-auth">
+      <% if user_signed_in? %>
+        <%= link_to 'Личный кабинет - ' + current_user.first_name, account_path %>
+        <%= link_to 'Выйти', destroy_user_session_path, :method => :delete %>
+      <% else %>
+        <%= link_to 'Войти', new_user_session_path %>
+        <%= link_to 'Регистрация', new_user_registration_path %>
+      <% end %>
+      </div>
+    </nav>
+
+    <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
+    
+
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>
