@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @lastAds = Advert.last(10)
+    @adverts = Advert.last(50)
   end
 
   def account

@@ -30,15 +30,6 @@ body, html
     max-width: 1170px
     margin: 0 auto
 
-
-// .alert
-//     padding: 1rem
-//     background-color: rgba(green, 0.5)
-// .notice
-//     padding: 1rem
-//     background-color: rgba(red, 0.5)
-
-
 //
 //   NavBar
 //
@@ -75,22 +66,24 @@ nav.nav
         .new_user
             width: 400px
             padding: 1rem
-            border: 1px solid rgba(#000, 0.5)
+            border: 1px solid $blue-light
             border-radius: 0.25rem
+            background-color: $blue
             .field
                 input
                     width: 100%
                     padding: 1rem
                     border-radius: 0.25rem
                     margin-bottom: 1rem
-                    border: 1px solid rgba(#000, 0.5)
+                    border: 1px solid $blue
+                    color: $blue-light
                     &:focus
                         outline: none
-                        border: 1px solid $blue
+                        border: 1px solid $blue-light
             .actions
                 .btn-auth
                     background: $blue
-                    border: none
+                    border: 1px solid $blue-light
                     padding: 0.5rem 1rem
                     color: #fff
                     border-radius: 0.1rem
